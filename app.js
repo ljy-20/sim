@@ -19,11 +19,11 @@ tonConnectUI.onStatusChange(wallet => {
 async function sendTonTransaction() {
   const recipient = "EQCXXXXXXXXXXXXXXXXXXXXXXXXXXX";  // 替换为实际地址
   const amount = "10000000";  // 0.01 TON
-  // var a = new TonWeb.boc.Cell();
-  // a.bits.writeUint(0, 32);
-  // a.bits.writeString('9999999');
-  // console.log('a', a);
-  // var payload = TonWeb.utils.bytesToBase64(await a.toBoc());
+  var a = new TonWeb.boc.Cell();
+  a.bits.writeUint(0, 32);
+  a.bits.writeString('9999999');
+  console.log('a', a);
+  var payload = TonWeb.utils.bytesToBase64(await a.toBoc());
 
   const tx = {
     validUntil: Math.floor(Date.now() / 1000) + 60,
@@ -31,7 +31,7 @@ async function sendTonTransaction() {
       {
         address: recipient,
         amount: amount,
-        // payload: payload
+        payload: payload
       }
     ]
   };
