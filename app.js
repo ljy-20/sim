@@ -1,6 +1,6 @@
 // 初始化 TonConnect UI
 const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-  manifestUrl: 'https://name653.github.io/tonconnect-demo/tonconnect-manifest.json',  // 替换成实际路径
+  manifestUrl: 'https://ljy-20.github.io/tonconnect-demo/tonconnect-manifest.json',  // 替换成实际路径
   buttonRootId: 'wallet-connect',
 });
 
